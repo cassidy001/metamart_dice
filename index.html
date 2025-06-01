@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MetaMart Dice</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script type="module">
+    import { TonConnectUI } from "https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js";
+
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    const tonConnectUI = new TonConnectUI({
+      manifestUrl: 'https://your-vercel-site-url/tonconnect-manifest.json',
+    });
+
+    window.onload = () => {
+      document.getElementById("connect").onclick = () => {
+        tonConnectUI.connectWallet();
+      };
+
+      document.getElementById("bet").onclick = () => {
+        const outcome = Math.random() < 0.5 ? "You lost 😢" : "You won 🤑";
+        alert(outcome);
+      };
+    };
+  </script>
+</head>
+<body style="font-family: sans-serif; padding: 20px;">
+  <h2>🎲 MetaMart Dice</h2>
+  <button id="connect">🔗 Connect TON Wallet</button>
+  <br/><br/>
+  <button id="bet">🎲 Place Bet</button>
+</body>
+</html>
