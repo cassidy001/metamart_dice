@@ -1,7 +1,8 @@
 {
-  "url": "https://your-vercel-site-url",
+  "url": "https://metamartdice1.vercel.app",
   "name": "MetaMart Dice",
-  "iconUrl": "https://your-vercel-site-url/icon.png",
-  "termsOfUseUrl": "https://your-vercel-site-url/terms",
-  "privacyPolicyUrl": "https://your-vercel-site-url/privacy"
+  "iconUrl": "https://metamartdice1.vercel.app/icon.png",
+  "termsOfUseUrl": "https://metamartdice1.vercel.app/terms",
+  "privacyPolicyUrl": "https://metamartdice1.vercel.app/privacy"
 }
+
