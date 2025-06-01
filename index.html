@@ -10,17 +10,20 @@
     tg.expand();
 
     const tonConnectUI = new TonConnectUI({
-      manifestUrl: 'manifestUrl: 'https://metamartdice1.vercel.app/tonconnect-manifest.json',
+      manifestUrl: 'https://metamartdice1.vercel.app/tonconnect-manifest.json',
     });
 
     window.onload = () => {
-      document.getElementById("connect").onclick = () => {
-        tonConnectUI.connectWallet();
+      const connectButton = document.getElementById("connect");
+      const betButton = document.getElementById("bet");
+
+      connectButton.onclick = () => {
+        tonConnectUI.connectWallet().catch(console.error);
       };
 
-      document.getElementById("bet").onclick = () => {
-        const outcome = Math.random() < 0.5 ? "You lost 😢" : "You won 🤑";
-        alert(outcome);
+      betButton.onclick = () => {
+        const result = Math.random() < 0.5 ? "You lost 😢" : "You won 🤑";
+        alert(result);
       };
     };
   </script>
